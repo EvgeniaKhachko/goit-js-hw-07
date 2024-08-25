@@ -31,8 +31,12 @@ const images = [
     images.forEach(function (image) {
       let li = document.createElement("li");
       //const img = document.createElement("img");
-      li.insertAdjacentHTML('afterbegin','<img class="gallery-image" src="'+ image.url + '" alt="' + image.alt + '"/>');
+      li.insertAdjacentHTML('afterbegin', `<img class="gallery-image" src="${image.url}" alt="${image.alt}"/>`);
+
+      // li.insertAdjacentHTML('afterbegin','<img class="gallery-image" src="'+ image.url + '" alt="' + image.alt + '"/>');
       fragment.appendChild(li);
     });
     
     element.appendChild(fragment);
+
+    
